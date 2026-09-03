@@ -1,0 +1,124 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/work-assistant-demo/fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/work-assistant-demo/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --pink: #ff80c2;
+  --pink-dim: #ff80c21f;
+}
+
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #e5e5e5;
+  font-family: Geist, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
+
+/* Custom scrollbars to match the dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 6px;
+  border: 2px solid #0a0a0a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e2e2e;
+}
+
+/* Markdown-rendered briefing content */
+.briefing-content h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e5e5e5;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+.briefing-content h2 {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #777;
+  font-family: 'Geist Mono', monospace;
+  margin-top: 2.25rem;
+  margin-bottom: 0.65rem;
+  padding-left: 0.6rem;
+  border-left: 2px solid var(--pink);
+}
+.briefing-content p {
+  font-size: 0.875rem;
+  color: #999;
+  line-height: 1.65;
+  margin-bottom: 0.4rem;
+}
+.briefing-content ul {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.briefing-content li {
+  font-size: 0.875rem;
+  color: #999;
+  line-height: 1.65;
+  margin-bottom: 0.4rem;
+  list-style: disc;
+}
+.briefing-content li::marker {
+  color: var(--pink);
+}
+.briefing-content strong {
+  color: #e0e0e0;
+  font-weight: 600;
+}
+.briefing-content del {
+  color: #3a3a3a;
+  text-decoration-color: #444;
+}
+.briefing-content hr {
+  display: none;
+}
+.briefing-content code {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.78em;
+  color: #777;
+  background: #161616;
+  border: 1px solid #222;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+.briefing-content p > strong:only-child {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #555;
+  font-family: 'Geist Mono', monospace;
+  margin-top: 0.9rem;
+  margin-bottom: 0.2rem;
+}
